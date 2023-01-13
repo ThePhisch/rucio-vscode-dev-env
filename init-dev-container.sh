@@ -19,7 +19,8 @@ echo ""
 echo "************* Initialize Rucio ******************"
 echo "*************************************************"
 # mkdir /run/httpd
-tools/run_tests_docker.sh -ir
+# tools/run_tests_docker.sh -ir
+tools/run_tests_docker.sh -i
 echo "Done!"
 echo ""
 exit 0
@@ -52,8 +53,8 @@ echo ""
 
 echo "************* Setup WebUI ******************"
 echo "***************************************************"
-# rm /usr/local/lib/python3.6/site-packages/flask/cli.py
-# cp /opt/rucio/debug_utils/flask_cli.py /usr/local/lib/python3.6/site-packages/flask/cli.py
+rm /usr/local/lib/python3.6/site-packages/flask/cli.py
+cp /opt/rucio/debug_utils/flask_cli.py /usr/local/lib/python3.6/site-packages/flask/cli.py
 
 echo "Done!"
 echo ""

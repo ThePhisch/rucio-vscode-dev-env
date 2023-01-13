@@ -104,11 +104,11 @@ services:
     image: docker.io/rucio/ssh
     volumes:
       - ../etc/certs/ssh/ruciouser_sshkey.pub:/tmp/sshkey.pub:Z
-  web1:
-    image: webdavtry
-    restart: always
-    environment:
-      AUTH_TYPE: Basic
-      USERNAME: alice
-      PASSWORD: secret
-      SSL_CERT: selfsigned
+  # web1:
+  #   image: thephisch/webdavtry:latest
+  #   restart: always
+  #   environment:
+  #     AUTH_TYPE: Basic
+  #     USERNAME: alice
+  #     PASSWORD: secret
+  #     SSL_CERT: selfsigned
